@@ -1,0 +1,52 @@
+{
+  "enitities": [
+    {
+      "id": "entities",
+      "name": "Entities",
+      "required": true,
+      "minValues": 1
+    }
+  ],
+  "components": [
+    {
+      "name": "Graph",
+      "fields": [
+        {
+          "id": "y-axis",
+          "name": "Y axis",
+          "validTypes": [
+            "numeric",
+            "Int",
+            "bigint",
+            "numeric",
+            "date",
+            "time",
+            "timetz",
+            "timestamp",
+            "timestamptz"
+          ],
+          "required": true,
+          "multipleFields": false
+        },
+        {
+          "id": "x-axis",
+          "name": "X axis",
+          "validTypes": [
+            "numeric",
+            "Int",
+            "bigint",
+            "numeric",
+            "date",
+            "time",
+            "timetz",
+            "timestamp",
+            "timestamptz"
+          ],
+          "required": true,
+          "multipleFields": false
+        }
+      ],
+      "props": []
+    }
+  ]
+}

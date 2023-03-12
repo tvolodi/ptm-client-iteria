@@ -1,0 +1,126 @@
+{
+  "enitities": [
+    {
+      "id": "entities",
+      "name": "Entities",
+      "required": true,
+      "minValues": 1
+    }
+  ],
+  "components": [
+    {
+      "name": "Aggregation",
+      "todo": "object rel",
+      "fields": [
+        {
+          "id": "aggregation",
+          "name": "Min / Max / Sum / Avg.",
+          "validTypes": ["number", "date", "dateTime", "string", "geometry"],
+          "required": false
+        }
+      ],
+      "template": {
+        "name": "dashboard-info-card"
+      },
+      "props": {
+        "cardHeaderSeparator": true
+      }
+    },
+    {
+      "name": "List",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Title",
+          "validTypes": ["string", "number", "date", "dateTime"],
+          "required": false
+        },
+        {
+          "id": "thumbnail",
+          "name": "Avatar",
+          "validTypes": ["string"],
+          "required": false
+        },
+        {
+          "id": "other",
+          "name": "Other",
+          "validTypes": ["string", "number", "date", "dateTime", "geometry"],
+          "required": false
+        }
+      ],
+      "template": {
+        "name": "dashboard-list"
+      },
+      "props": {
+        "cardHeaderSeparator": true
+      }
+    },
+    {
+      "name": "Table",
+      "fields": [
+        {
+          "id": "other",
+          "name": "Other",
+          "validTypes": ["string", "number", "date", "dateTime", "geometry"],
+          "required": false
+        }
+      ],
+      "template": {
+        "name": "dashboard-table"
+      },
+      "props": {
+        "cardHeaderSeparator": true
+      }
+    },
+    {
+      "name": "Bar Chart",
+      "fields": [
+        {
+          "id": "x-axis",
+          "name": "Bars",
+          "validTypes": ["number", "string", "date", "dateTime"],
+          "required": true,
+          "operation": "get"
+        },
+        {
+          "id": "y-axis",
+          "name": "Series",
+          "validTypes": ["number", "string", "date", "dateTime"],
+          "required": true,
+          "operation": "get"
+        }
+      ],
+      "template": {
+        "name": "dashboard-bar-graph"
+      },
+      "props": {
+        "cardHeaderSeparator": true
+      }
+    },
+    {
+      "name": "Pie Chart",
+      "fields": [
+        {
+          "id": "arcs",
+          "name": "Arcs",
+          "validTypes": ["number"],
+          "required": true,
+          "operation": "get"
+        },
+        {
+          "id": "series",
+          "name": "Series",
+          "validTypes": ["number", "string", "date", "dateTime"],
+          "required": false,
+          "operation": "get"
+        }
+      ],
+      "template": {
+        "name": "dashboard-pie-chart"
+      },
+      "props": {
+        "cardHeaderSeparator": true
+      }
+    }
+  ]
+}
